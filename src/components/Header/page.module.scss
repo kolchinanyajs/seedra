@@ -1,2 +1,39 @@
 .header {
+  height: rem(72);
+  background: var(--white);
+  box-shadow: 0 rem(4) rem(12) 0 rgba(207, 207, 207, 0.25);
+  display: flex;
+  align-items: center;
+  &__logo {
+    display: block;
+    width: rem(97);
+    height: rem(21);
+    margin-right: rem(64);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__container {
+    display: flex;
+  }
+}
+
+.menu {
+  display: flex;
+  &__item {
+    padding: 0 rem(16);
+    border-left: 1px solid var(--light-grey-stroke);
+    &:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+  &__link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    font: var(--regular-14);
+  }
 }

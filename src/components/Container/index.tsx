@@ -3,10 +3,11 @@ import styles from "./page.module.scss";
 
 interface IContainer {
   children: React.ReactNode;
+  className?: string;
 }
 
-const Container = ({ children }: IContainer) => {
-  return <div className={styles.container}>{children}</div>;
+const Container = ({ children, className }: IContainer) => {
+  return <div className={`${styles.container} ${className}`}>{children}</div>;
 };
 
 export default Container;
