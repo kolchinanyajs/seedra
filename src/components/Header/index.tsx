@@ -5,6 +5,7 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import Icons from "../Icons";
 import Search from "../Search";
+import Button from "../Button";
 
 const menu = [
   {
@@ -66,6 +67,18 @@ const Header = () => {
           </li>
         </ul>
         <Search />
+        <ul className={styles.header__buttons}>
+          <li>
+            <Button>
+              <Icons iconName="favorite" />
+            </Button>
+          </li>
+          <li>
+            <Button>
+              <Icons iconName="basket" />
+            </Button>
+          </li>
+        </ul>
       </Container>
     </header>
   );

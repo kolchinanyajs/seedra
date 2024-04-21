@@ -25,6 +25,13 @@
   &__socials {
     margin-right: rem(13);
   }
+  &__buttons {
+    position: relative;
+    top: rem(2);
+    left: rem(-2);
+    display: flex;
+    gap: rem(24);
+  }
 }
 
 .menu {
