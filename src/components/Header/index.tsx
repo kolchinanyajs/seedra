@@ -3,6 +3,7 @@ import Container from "../Container";
 
 import styles from "./page.module.scss";
 import Link from "next/link";
+import Icons from "../Icons";
 
 const menu = [
   {
@@ -41,6 +42,28 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+        <ul className={`${styles.header__socials} ${styles.socials}`}>
+          <li className={styles.socials__item}>
+            <a
+              className={styles.socials__link}
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icons iconName="instagram" />
+            </a>
+          </li>
+          <li className={styles.socials__item}>
+            <a
+              className={styles.socials__link}
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icons iconName="facebook" />
+            </a>
+          </li>
+        </ul>
       </Container>
     </header>
   );
