@@ -4,6 +4,7 @@ import Container from "../Container";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import Icons from "../Icons";
+import Search from "../Search";
 
 const menu = [
   {
@@ -64,6 +65,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
+        <Search />
       </Container>
     </header>
   );

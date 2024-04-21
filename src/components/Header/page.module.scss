@@ -23,8 +23,7 @@
     margin-right: rem(43);
   }
   &__socials {
-    display: flex;
-    gap: rem(8);
+    margin-right: rem(13);
   }
 }
 
@@ -47,4 +46,9 @@
     text-transform: uppercase;
     font: var(--regular-14);
   }
+}
+
+.socials {
+  display: flex;
+  gap: rem(8);
 }
