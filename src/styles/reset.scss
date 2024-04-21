@@ -10,6 +10,9 @@ html {
   @media (max-width: $desktop) {
     font-size: vw(16);
   }
+  @media (min-width: ($desktop + 1px)) {
+    font-size: clamp(16px, vw(16, 1440), 24px);
+  }
 }
 
 body {
@@ -18,6 +21,7 @@ body {
   font-size: var(--default-font-size);
   line-height: var(--default-line-height);
   font-weight: var(--default-font-weight);
+  color: var(--text-primary);
 }
 
 ul {

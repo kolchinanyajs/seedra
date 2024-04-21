@@ -1,0 +1,73 @@
+.hero {
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    min-height: rem(455);
+    background: var(--light-green);
+    border-radius: rem(24);
+    padding: rem(48) 0 rem(56) rem(76);
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: rem(384);
+      height: rem(440);
+      background: url("/leaves.png") no-repeat 0 0 / cover;
+    }
+  }
+  &__inner {
+    display: grid;
+    gap: rem(74);
+    justify-content: space-between;
+    grid-template-columns: minmax(auto, rem(650)) rem(310);
+  }
+  &__title {
+    letter-spacing: -0.06em;
+    margin-bottom: rem(13);
+  }
+  &__description {
+    max-width: rem(560);
+    margin-bottom: rem(21);
+  }
+  &__picture {
+    position: relative;
+    top: rem(20);
+    width: rem(310);
+    height: rem(347);
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 rem(4) rem(26) rgba(0, 0, 0, 0.41));
+    transform: translateZ(0); // safari
+  }
+}
+
+.prices {
+  display: flex;
+  gap: rem(21);
+  align-items: center;
+  &__item {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    font-weight: 600;
+  }
+  &__fire {
+    --size: #{rem(46)};
+    width: var(--size);
+    height: var(--size);
+  }
+  &__new {
+    font-size: rem(42);
+    line-height: 1.28;
+  }
+  &__old {
+    font-size: rem(22);
+    line-height: 1.8;
+    text-decoration-line: line-through;
+    color: var(--text-secondary);
+  }
+}

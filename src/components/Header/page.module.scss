@@ -4,6 +4,7 @@
   box-shadow: 0 rem(4) rem(12) 0 rgba(207, 207, 207, 0.25);
   display: flex;
   align-items: center;
+  margin-bottom: rem(32);
   &__logo {
     display: block;
     width: rem(97);
@@ -51,11 +52,12 @@
     color: var(--text-secondary);
     text-decoration: none;
     text-transform: uppercase;
-    font: var(--regular-14);
+    font-size: rem(14);
+    line-height: 1.78;
   }
 }
 
 .socials {
   display: flex;
-  gap: rem(8);
+  gap: rem(10);
 }
