@@ -69,12 +69,12 @@ const Header = () => {
         <Search />
         <ul className={styles.header__buttons}>
           <li>
-            <Button>
+            <Button variant="icon">
               <Icons iconName="favorite" />
             </Button>
           </li>
           <li>
-            <Button>
+            <Button variant="icon">
               <Icons iconName="basket" />
             </Button>
           </li>

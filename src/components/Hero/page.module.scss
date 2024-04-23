@@ -1,11 +1,10 @@
 .hero {
-  &__inner {
+  &__container {
     position: relative;
     overflow: hidden;
-    min-height: rem(455);
     background: var(--light-green);
     border-radius: rem(24);
-    padding: rem(48) 0 rem(56) rem(76);
+    padding: rem(48) 0 rem(52) rem(76);
     &::before {
       content: "";
       position: absolute;
@@ -42,6 +41,13 @@
     object-fit: cover;
     filter: drop-shadow(0 rem(4) rem(26) rgba(0, 0, 0, 0.41));
     transform: translateZ(0); // safari
+  }
+  &__prices {
+    margin-bottom: rem(25);
+  }
+  &__buttons {
+    display: flex;
+    gap: rem(12);
   }
 }
 

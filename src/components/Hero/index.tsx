@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 import Container from "../Container";
 import Image from "next/image";
+import Button from "../Button";
 
 const Hero = () => {
   return (
@@ -28,6 +29,10 @@ const Hero = () => {
                 <span className={styles.prices__new}>$12.56</span>
               </div>
               <span className={styles.prices__old}>$15.00</span>
+            </div>
+            <div className={styles.hero__buttons}>
+              <Button variant="primary">Add to card</Button>
+              <Button variant="secondary">Discover</Button>
             </div>
           </div>
           <div className={styles.hero__picture}>

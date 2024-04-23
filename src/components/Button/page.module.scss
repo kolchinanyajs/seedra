@@ -1,3 +1,33 @@
 .button {
   @include reset-btn();
+  @extend .animated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: rem(16);
+  font-weight: 500;
+  padding: rem(11) rem(33);
+  border-radius: rem(8);
+  height: rem(51);
+  letter-spacing: -0.03em;
+  &._primary {
+    color: var(--white);
+    background: var(--green-brand);
+    &:hover {
+      background: var(--green-brand-hover);
+    }
+  }
+  &._secondary {
+    color: var(--green-brand);
+    background: var(--white);
+    &:hover {
+      background: var(--invisible-green);
+    }
+  }
+  &._icon {
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+  }
 }
