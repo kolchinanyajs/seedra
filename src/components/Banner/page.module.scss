@@ -11,6 +11,7 @@
   }
   &._hero {
     min-height: rem(104);
+    margin-bottom: rem(60);
     #{$this}__container {
       background: rgba(255, 230, 46, 0.09) url("/banner-1.png") no-repeat 0 0 /
         cover;
