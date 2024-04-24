@@ -1,0 +1,21 @@
+.banner {
+  min-height: rem(104);
+  &__container {
+    min-height: inherit;
+    border-radius: rem(12);
+    overflow: hidden;
+    background: rgba(255, 230, 46, 0.09) url("/banner-1.png") no-repeat 0 0 /
+      cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__title {
+    letter-spacing: -0.02em;
+  }
+  &__description {
+    color: var(--text-secondary);
+    letter-spacing: -0.035em;
+  }
+}
