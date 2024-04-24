@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.scss";
 
-const VARIANT_MODS = {
+const VARIANT_MODS: { [key: string]: string } = {
   primary: styles._primary,
   secondary: styles._secondary,
   icon: styles._icon,
