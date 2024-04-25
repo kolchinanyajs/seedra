@@ -6,6 +6,7 @@ import Link from "next/link";
 import Icons from "../Icons";
 import Search from "../Search";
 import Button from "../Button";
+import Favorite from "../Icons/Favorite";
 
 const menu = [
   {
@@ -70,7 +71,7 @@ const Header = () => {
         <ul className={styles.header__buttons}>
           <li>
             <Button variant="icon">
-              <Icons iconName="favorite" />
+              <Favorite variant="green" />
             </Button>
           </li>
           <li>

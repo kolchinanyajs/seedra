@@ -1,10 +1,8 @@
 import React from "react";
 import Instagram from "./Instagram";
 import Facebook from "./Facebook";
-
 import styles from "./page.module.scss";
 import Search from "./Search";
-import Favorite from "./Favorite";
 import Basket from "./Basket";
 import All from "./All";
 
@@ -24,9 +22,6 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "search":
       icon = <Search />;
-      break;
-    case "favorite":
-      icon = <Favorite />;
       break;
     case "basket":
       icon = <Basket />;

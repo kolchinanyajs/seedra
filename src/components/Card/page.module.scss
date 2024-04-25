@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  padding: rem(28);
+  padding-bottom: rem(22);
+  border-radius: rem(8);
+  border: rem(2) solid var(--light-grey-stroke);
+  &__picture {
+    display: block;
+    position: relative;
+    width: rem(294);
+    height: rem(294);
+    margin-bottom: rem(24);
+  }
+  &__title {
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1.56;
+    letter-spacing: -0.04em;
+    max-width: rem(291);
+    margin-bottom: rem(8);
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price {
+    font-size: rem(28);
+    font-weight: 600;
+    line-height: 1.92;
+  }
+  &__button {
+    @include reset-btn();
+    padding: rem(12);
+    border-radius: rem(8);
+    height: rem(48);
+    border: rem(1) solid var(--light-grey-stroke);
+  }
+  &__favorite {
+    @include reset-btn();
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    z-index: 1;
+    border-radius: 50%;
+    width: rem(40);
+    height: rem(40);
+    border: rem(1) solid var(--light-grey-stroke);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
