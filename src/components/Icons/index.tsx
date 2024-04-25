@@ -6,6 +6,7 @@ import styles from "./page.module.scss";
 import Search from "./Search";
 import Favorite from "./Favorite";
 import Basket from "./Basket";
+import All from "./All";
 
 interface IIcons {
   iconName: string;
@@ -29,6 +30,9 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "basket":
       icon = <Basket />;
+      break;
+    case "all":
+      icon = <All />;
       break;
     default:
       icon = <div>Иконка не найдена</div>;
