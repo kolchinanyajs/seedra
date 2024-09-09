@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Blog from "@/components/Blog";
+import Feedback from "@/components/Feedback";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 
@@ -14,6 +15,7 @@ export default function Home() {
       />
       <Products />
       <Blog />
+      <Feedback />
     </main>
   );
 }
