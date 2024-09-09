@@ -1,5 +1,9 @@
 .products {
-  &__title {
+  margin-bottom: rem(90);
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: rem(38);
   }
 }

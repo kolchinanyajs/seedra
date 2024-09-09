@@ -1,0 +1,14 @@
+.blog {
+  margin-bottom: rem(86);
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(42);
+  }
+  &__cards {
+    display: grid;
+    gap: rem(30);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

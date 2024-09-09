@@ -25,6 +25,10 @@
       background: var(--invisible-green);
     }
   }
+  &._border {
+    color: var(--green-brand);
+    border: 1px solid var(--light-grey-stroke);
+  }
   &._icon {
     padding: 0;
     height: auto;

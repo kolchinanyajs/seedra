@@ -13,6 +13,7 @@
   font-size: rem(24);
   font-weight: 600;
   line-height: 1.31;
+  @include letter-spacing-em(-0.48, 24);
 }
 
 .regular-14 {

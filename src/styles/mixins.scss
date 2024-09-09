@@ -18,3 +18,8 @@
 @function vw($px, $width: 1440) {
   @return calc(round(math.div($px, $width) * 100vw * 10000) / 10000);
 }
+
+@mixin letter-spacing-em($letter-spacing-px, $font-size-px) {
+  $letter-spacing-em: calc($letter-spacing-px / $font-size-px);
+  letter-spacing: #{$letter-spacing-em}em;
+}
