@@ -6,49 +6,46 @@ import StarEmpty from "../Icons/Stars/StarEmpty";
 
 interface IRating {
   rating: number;
-  ratingCount: number;
+  size?: number;
+  className?: string;
+  ratingCount: number | boolean;
 }
 
-const Rating = ({ rating, ratingCount }: IRating) => {
-  // Округляем рейтинг до ближайшего 0.5, чтобы определить количество полных и наполовину заполненных звезд
+const Rating = ({ rating, ratingCount, className, size }: IRating) => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating - fullStars >= 0.5;
 
-  // Создаем массив, который будет содержать компоненты звезд для отображения
   const stars = [];
 
-  // Добавляем полные звезды
   for (let i = 0; i < fullStars; i++) {
     stars.push(
       <li key={i} className={styles.rating__item}>
-        <Star />
+        <Star size={size || 16} />
       </li>
     );
   }
 
-  // Добавляем наполовину заполненную звезду, если есть
   if (hasHalfStar) {
     stars.push(
       <li key="half" className={styles.rating__item}>
-        <StarHalf />
+        <StarHalf size={size || 16} />
       </li>
     );
   }
 
-  // Добавляем пустые звезды до общего количества звезд (5)
   while (stars.length < 5) {
     stars.push(
       <li key={stars.length} className={styles.rating__item}>
-        <StarEmpty />
+        <StarEmpty size={size || 16} />
       </li>
     );
   }
 
   return (
-    <div className={styles.rating}>
+    <div className={`${styles.rating} ${className}`}>
       <ul className={styles.rating__list}>{stars}</ul>
       <span className={`${styles.rating__count} regular-14`}>
-        ({ratingCount})
+        {ratingCount && `(${ratingCount})`}
       </span>
     </div>
   );

@@ -1,10 +1,14 @@
 import React from "react";
 
-const StarHalf = () => {
+interface IStarHalf {
+  size?: number;
+}
+
+const StarHalf = ({ size = 16 }: IStarHalf = {}) => {
   return (
     <svg
-      width="16"
-      height="16"
+      width={size}
+      height={size}
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

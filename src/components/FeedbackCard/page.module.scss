@@ -1,0 +1,24 @@
+.feedback-card {
+  border-radius: rem(12);
+  border: rem(1) solid var(--light-grey-stroke);
+  padding: rem(35);
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    margin-bottom: rem(28);
+  }
+  &__image {
+    --size: #{rem(64)};
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    grid-column: 1;
+  }
+  &__time {
+    color: var(--text-secondary);
+  }
+  &__rating {
+    margin-bottom: rem(16);
+  }
+}

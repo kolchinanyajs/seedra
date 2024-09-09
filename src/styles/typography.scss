@@ -27,6 +27,13 @@
   line-height: 1.75;
 }
 
+.medium-18 {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: 1.38;
+  @include letter-spacing-em(-0.72, 18);
+}
+
 .medium-16 {
   font-size: rem(16);
   font-weight: 500;
