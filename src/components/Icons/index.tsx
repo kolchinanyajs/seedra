@@ -30,7 +30,7 @@ const Icons = ({ iconName }: IIcons) => {
       icon = <All />;
       break;
     default:
-      icon = <div>Иконка не найдена</div>;
+      icon = <i>Иконка не найдена</i>;
   }
 
   return <i className={styles.icon}>{icon}</i>;
