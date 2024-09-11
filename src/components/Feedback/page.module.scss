@@ -1,6 +1,5 @@
 .feedback {
   position: relative;
-  margin-bottom: rem(100);
   &__title {
     text-align: center;
     margin-bottom: rem(44);
@@ -11,6 +10,7 @@
   &__slide {
     opacity: 0.5;
     top: 0;
+    min-height: rem(347);
     transition: all 0.3s ease-in-out;
   }
   :global(.swiper-slide-active) {
