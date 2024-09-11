@@ -33,7 +33,7 @@ const Icons = ({ iconName }: IIcons) => {
       icon = <div>Иконка не найдена</div>;
   }
 
-  return <div className={styles.icon}>{icon}</div>;
+  return <i className={styles.icon}>{icon}</i>;
 };
 
 export default Icons;
