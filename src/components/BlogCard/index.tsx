@@ -8,8 +8,9 @@ interface IBlogCard {
   time: string;
   image: string;
   title: string;
-  description?: string;
+  description: string;
   className?: string[];
+  isSquare?: boolean;
 }
 
 const BlogCard = ({
@@ -18,6 +19,7 @@ const BlogCard = ({
   image,
   title,
   description,
+  isSquare,
 }: IBlogCard) => {
   return (
     <article
@@ -35,9 +37,17 @@ const BlogCard = ({
           className={`${styles.blogcard__title} h3`}
           dangerouslySetInnerHTML={{ __html: title }}
         ></h3>
-        <p className={`${styles.blogcard__description} regular-14`}>
-          {description}
-        </p>
+        {!isSquare ? (
+          <p
+            className={`${styles.blogcard__description} regular-14`}
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
+        ) : (
+          <p
+            className={`${styles.blogcard__description} ${styles._square} regular-14`}
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
+        )}
         <Button variant="secondary">Read</Button>
       </div>
       <div className={styles.blogcard__image}>

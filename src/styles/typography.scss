@@ -23,6 +23,10 @@
   font-weight: 600;
   line-height: 1.31;
   @include letter-spacing-em(-0.48, 24);
+  @media (max-width: $tablet) {
+    font-size: rem(18);
+    @include lineHeight(28, 18);
+  }
 }
 
 .regular-14 {

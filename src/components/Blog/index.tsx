@@ -33,7 +33,10 @@ const Blog = () => {
           {isMobile ? (
             <Swiper slidesPerView={1.08} spaceBetween={11}>
               {data.map(
-                ({ className, time, image, title, description }, index) => (
+                (
+                  { className, time, image, title, description, isSquare },
+                  index
+                ) => (
                   <SwiperSlide key={index}>
                     <BlogCard
                       key={index}
@@ -41,6 +44,7 @@ const Blog = () => {
                       time={time}
                       image={image}
                       title={title}
+                      isSquare={isSquare}
                       description={description}
                     />
                   </SwiperSlide>
@@ -50,13 +54,17 @@ const Blog = () => {
           ) : (
             <div className={styles.blog__grid}>
               {data.map(
-                ({ className, time, image, title, description }, index) => (
+                (
+                  { className, time, image, title, description, isSquare },
+                  index
+                ) => (
                   <BlogCard
                     key={index}
                     className={className}
                     time={time}
                     image={image}
                     title={title}
+                    isSquare={isSquare}
                     description={description}
                   />
                 )

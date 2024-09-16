@@ -23,3 +23,8 @@
   $letter-spacing-em: calc($letter-spacing-px / $font-size-px);
   letter-spacing: #{$letter-spacing-em}em;
 }
+
+@mixin lineHeight($line-height-px, $font-size-px) {
+  $line-height-em: calc($line-height-px / $font-size-px);
+  line-height: #{$line-height-em};
+}
