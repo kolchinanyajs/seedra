@@ -1,39 +1,25 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 import Container from "../Container";
 import BlogCard from "../BlogCard";
 import Button from "../Button";
-
-const data = [
-  {
-    className: ["_horizontal", "_green"],
-    time: "12.09.2021",
-    image: "/blog-1.png",
-    title: "How to&nbsp;plant spinach correctly in&nbsp;winter",
-    description:
-      "In most areas, successive sowing can be done from early spring until early winter, but more often during hotter months In most areas, successive sowing can be done from early spring until early winter, but more often during hotter months",
-  },
-  {
-    className: ["_vertical"],
-    time: "12.09.2021",
-    image: "/blog-2.png",
-    title: "How to plant spinach correctly in winter",
-    description:
-      "In most areas, successive sowing can be done from early spring until early winter, but more often during hotter months In most areas, successive sowing can be done from early spring until early winter, but more often during hotter months",
-  },
-  {
-    time: "12.09.2021",
-    image: "/blog-3.png",
-    title: "How to plant spinach correctly in winter",
-  },
-  {
-    time: "12.09.2021",
-    image: "/blog-3.png",
-    title: "How to plant spinach correctly in winter",
-  },
-];
+import { data } from "./data";
+import { useMediaQuery } from "react-responsive";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Blog = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <section className={styles.blog}>
       <Container className={styles.blog__container}>
@@ -43,17 +29,40 @@ const Blog = () => {
             Go to our blog
           </Button>
         </header>
-        <div className={styles.blog__cards}>
-          {data.map(({ className, time, image, title, description }, index) => (
-            <BlogCard
-              key={index}
-              className={className}
-              time={time}
-              image={image}
-              title={title}
-              description={description}
-            />
-          ))}
+        <div className={`${styles.blog__cards} slider`}>
+          {isMobile ? (
+            <Swiper slidesPerView={1.08} spaceBetween={11}>
+              {data.map(
+                ({ className, time, image, title, description }, index) => (
+                  <SwiperSlide key={index}>
+                    <BlogCard
+                      key={index}
+                      className={className}
+                      time={time}
+                      image={image}
+                      title={title}
+                      description={description}
+                    />
+                  </SwiperSlide>
+                )
+              )}
+            </Swiper>
+          ) : (
+            <div className={styles.blog__grid}>
+              {data.map(
+                ({ className, time, image, title, description }, index) => (
+                  <BlogCard
+                    key={index}
+                    className={className}
+                    time={time}
+                    image={image}
+                    title={title}
+                    description={description}
+                  />
+                )
+              )}
+            </div>
+          )}
         </div>
       </Container>
     </section>

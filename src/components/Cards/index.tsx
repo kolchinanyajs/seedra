@@ -5,7 +5,6 @@ import styles from "./page.module.scss";
 import Card from "../Card";
 import { useMediaQuery } from "react-responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 
@@ -22,15 +21,9 @@ const Cards = () => {
   }
 
   return (
-    <div className={`${styles.cards} cards`}>
+    <div className={`${styles.cards} slider`}>
       {isMobile ? (
-        <Swiper
-          modules={[Autoplay, Navigation, Pagination]}
-          slidesPerView={1.08}
-          spaceBetween={11}
-          pagination={{ clickable: true }}
-          navigation
-        >
+        <Swiper slidesPerView={1.08} spaceBetween={11}>
           {[...Array(6)].map((_, index) => (
             <SwiperSlide key={index}>
               <Card />
