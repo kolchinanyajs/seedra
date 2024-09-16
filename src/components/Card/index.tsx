@@ -32,16 +32,18 @@ const Card = () => {
           fill
         />
       </picture>
-      <Rating rating={4.5} ratingCount={123} />
-      <p className={styles.card__title}>
-        Seedra Cilantro Seeds for Planting Indoor and Outdoor
-      </p>
-      <footer className={styles.card__footer}>
-        <p className={styles.card__price}>$12.56</p>
-        <button className={styles.card__button} type="button">
-          <Icons iconName="basket" />
-        </button>
-      </footer>
+      <div className={styles.card__content}>
+        <Rating rating={4.5} ratingCount={123} />
+        <p className={styles.card__title}>
+          Seedra Cilantro Seeds for Planting Indoor and Outdoor
+        </p>
+        <footer className={styles.card__footer}>
+          <p className={styles.card__price}>$12.56</p>
+          <button className={styles.card__button} type="button">
+            <Icons iconName="basket" />
+          </button>
+        </footer>
+      </div>
     </article>
   );
 };

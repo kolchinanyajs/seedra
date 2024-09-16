@@ -26,7 +26,7 @@ const Cards = () => {
       {isMobile ? (
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
-          slidesPerView={1.07}
+          slidesPerView={1.08}
           spaceBetween={11}
           pagination={{ clickable: true }}
           navigation

@@ -19,6 +19,7 @@
         cover;
     }
     @media (max-width: $tablet) {
+      margin-bottom: rem(32);
       #{$this}__container {
         position: relative;
         background: rgba(255, 230, 46, 0.09);

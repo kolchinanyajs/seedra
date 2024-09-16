@@ -6,5 +6,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: rem(38);
+    @media (max-width: $tablet) {
+      margin-bottom: rem(21);
+    }
   }
 }

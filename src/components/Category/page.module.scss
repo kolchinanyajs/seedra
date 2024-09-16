@@ -11,4 +11,7 @@
   border: rem(2) solid var(--light-grey-stroke);
   padding: 0 rem(16);
   text-transform: uppercase;
+  @media (max-width: $tablet) {
+    height: rem(57);
+  }
 }
