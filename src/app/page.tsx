@@ -8,7 +8,7 @@ import Products from "@/components/Products";
 export default function Home() {
   return (
     <main>
-      {/* <Hero /> */}
+      <Hero />
       {/* <Banner
         title="We sell seeds"
         description="that always sprout and gardening supplies which never break"
