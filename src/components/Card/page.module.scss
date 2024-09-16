@@ -29,6 +29,17 @@
     letter-spacing: -0.04em;
     max-width: rem(291);
     margin-bottom: rem(8);
+    color: var(--text-primary);
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
   }
   &__footer {
     display: flex;
@@ -46,13 +57,14 @@
     border-radius: rem(8);
     height: rem(48);
     border: rem(1) solid var(--light-grey-stroke);
+    z-index: 2;
   }
   &__favorite {
     @include reset-btn();
     position: absolute;
     top: rem(12);
     right: rem(12);
-    z-index: 1;
+    z-index: 2;
     border-radius: 50%;
     width: rem(40);
     height: rem(40);
