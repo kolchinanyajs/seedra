@@ -14,13 +14,10 @@ export default function Home() {
         description="that always sprout and gardening supplies which never break"
         className="hero"
       />
-
       <Products />
       <Blog />
       <Feedback />
-      {/* 
-      
-      <Help /> */}
+      <Help />
     </main>
   );
 }
