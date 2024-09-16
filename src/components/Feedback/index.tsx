@@ -32,10 +32,6 @@ const Feedback = () => {
       <h2 className={`${styles.feedback__title} h2`}>What out clients say</h2>
       <Swiper
         ref={swiperRef}
-        spaceBetween={30}
-        slidesPerView={2.58}
-        centeredSlides={true}
-        loop={true}
         pagination={{
           el: ".swiper-pagination",
           clickable: true,
@@ -44,6 +40,18 @@ const Feedback = () => {
         className={styles.feedback__swiper}
         onInit={customizePagination}
         onSlideChange={customizePagination}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.12,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2.58,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+          },
+        }}
       >
         {[...Array(6)].map((_, index) => (
           <SwiperSlide key={index} className={styles.feedback__slide}>

@@ -1,11 +1,21 @@
 .feedback {
   position: relative;
+  @media (max-width: $tablet) {
+    padding-left: rem(15);
+  }
   &__title {
     text-align: center;
     margin-bottom: rem(44);
+    @media (max-width: $tablet) {
+      text-align: left;
+      margin-bottom: rem(30);
+    }
   }
   &__swiper {
     padding-top: rem(35);
+    @media (max-width: $tablet) {
+      padding-top: 0;
+    }
   }
   &__slide {
     opacity: 0.5;
@@ -18,10 +28,16 @@
     top: rem(-35);
     transition: all 0.3s ease-in-out;
     transition-delay: 0.1s;
+    @media (max-width: $tablet) {
+      top: 0;
+    }
   }
   :global(.swiper-pagination) {
     position: relative;
     top: rem(30);
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
   :global(.swiper-pagination-bullet) {
     width: rem(35);

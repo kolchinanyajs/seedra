@@ -17,8 +17,9 @@ export default function Home() {
 
       <Products />
       <Blog />
-      {/* 
       <Feedback />
+      {/* 
+      
       <Help /> */}
     </main>
   );

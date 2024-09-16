@@ -1,5 +1,8 @@
 .blog {
   margin-bottom: rem(86);
+  @media (max-width: $tablet) {
+    margin-bottom: rem(54);
+  }
   &__header {
     display: flex;
     align-items: center;
