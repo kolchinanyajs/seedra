@@ -5,6 +5,7 @@ import styles from "./page.module.scss";
 import Search from "./Search";
 import Basket from "./Basket";
 import All from "./All";
+import Menu from "./Menu";
 
 interface IIcons {
   iconName: string;
@@ -28,6 +29,9 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "all":
       icon = <All />;
+      break;
+    case "menu":
+      icon = <Menu />;
       break;
     default:
       icon = <i>Иконка не найдена</i>;

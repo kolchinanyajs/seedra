@@ -69,14 +69,19 @@ const Header = () => {
         </ul>
         <Search />
         <ul className={styles.header__buttons}>
-          <li>
+          <li className={styles["header__buttons-item"]}>
             <Button variant="icon">
               <Favorite variant="green" />
             </Button>
           </li>
-          <li>
+          <li className={styles["header__buttons-item"]}>
             <Button variant="icon">
               <Icons iconName="basket" />
+            </Button>
+          </li>
+          <li className={`${styles["header__buttons-item"]} ${styles._menu}`}>
+            <Button variant="icon">
+              <Icons iconName="menu" />
             </Button>
           </li>
         </ul>
