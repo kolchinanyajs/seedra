@@ -12,6 +12,11 @@
   font-size: rem(36);
   line-height: 1.5;
   letter-spacing: -0.06em;
+  @media (max-width: $tablet) {
+    font-size: rem(22);
+    line-height: 1.31;
+    @include letter-spacing-em(-0.48, 24);
+  }
 }
 
 .h3 {

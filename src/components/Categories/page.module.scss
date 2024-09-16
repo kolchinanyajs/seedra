@@ -1,9 +1,13 @@
 .categories {
   display: flex;
+  gap: rem(8);
   margin-bottom: rem(32);
-  &__item {
-    display: flex;
-    gap: rem(8);
-    flex-grow: 1;
+  overflow-x: auto;
+  @media (max-width: $tablet) {
+    margin: 0 rem(-15) rem(32);
+    padding: 0 rem(15);
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }

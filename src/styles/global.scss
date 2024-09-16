@@ -36,3 +36,12 @@
     left $default-transition-duration $default-transition-function,
     border-radius $default-transition-duration $default-transition-function;
 }
+
+.cards {
+  .swiper {
+    @media (max-width: $tablet) {
+      margin: 0 rem(-15);
+      padding: 0 rem(15);
+    }
+  }
+}

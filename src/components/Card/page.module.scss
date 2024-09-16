@@ -1,14 +1,17 @@
 .card {
   position: relative;
-  padding: rem(28);
+  padding: rem(26);
   padding-bottom: rem(22);
   border-radius: rem(8);
   border: rem(2) solid var(--light-grey-stroke);
+  @media (max-width: $tablet) {
+    padding: rem(14);
+  }
   &__picture {
     display: block;
     position: relative;
-    width: rem(294);
-    height: rem(294);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
     margin-bottom: rem(24);
   }
   &__title {
