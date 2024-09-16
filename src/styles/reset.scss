@@ -5,6 +5,11 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   font-size: 16px;
   @media (max-width: $desktop) {
@@ -25,6 +30,8 @@ body {
   line-height: var(--default-line-height);
   font-weight: var(--default-font-weight);
   color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
 }
 
 ul {

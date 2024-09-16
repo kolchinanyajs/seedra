@@ -1,0 +1,5 @@
+.products-grid {
+  display: grid;
+  gap: rem(32);
+  grid-template-columns: rem(253) 1fr;
+}
