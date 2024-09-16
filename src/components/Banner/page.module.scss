@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
   }
   &._hero {
     min-height: rem(104);
@@ -16,12 +17,45 @@
       background: rgba(255, 230, 46, 0.09) url("/banner-1.png") no-repeat 0 0 /
         cover;
     }
+    @media (max-width: $tablet) {
+      #{$this}__container {
+        position: relative;
+        background: rgba(255, 230, 46, 0.09);
+        justify-content: initial;
+        padding-block: rem(38) rem(56);
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+        }
+        &::before {
+          left: rem(-14);
+          bottom: rem(-30);
+          width: rem(110);
+          height: rem(118);
+          background: url("/banner-decor-mobile-left.png") no-repeat 0 0 / cover;
+        }
+        &::after {
+          right: rem(-40);
+          bottom: rem(-60);
+          width: rem(147);
+          height: rem(148);
+          background: url("/banner-decor-mobile-right.png") no-repeat 0 0 /
+            cover;
+        }
+      }
+    }
   }
   &__title {
+    position: relative;
     letter-spacing: -0.02em;
   }
   &__description {
+    position: relative;
     color: var(--text-secondary);
     letter-spacing: -0.035em;
+    @media (max-width: $tablet) {
+      max-width: rem(282);
+    }
   }
 }

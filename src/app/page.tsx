@@ -9,11 +9,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <Banner
+      <Banner
         title="We sell seeds"
         description="that always sprout and gardening supplies which never break"
         className="hero"
       />
+      {/*
       <Products />
       <Blog />
       <Feedback />
