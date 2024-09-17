@@ -23,7 +23,7 @@ const menu = [
   },
   {
     name: "Contacts",
-    link: "/contact",
+    link: "/contacts",
   },
 ];
 

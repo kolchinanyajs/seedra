@@ -11,21 +11,31 @@ const Footer = () => {
         <div className={styles.footer__inner}>
           <ul className={styles.footer__menu}>
             <li className={styles.footer__item}>
-              <Link className={`${styles.footer__link} regular-14`} href="/">
+              <Link
+                className={`${styles.footer__link} regular-14`}
+                href="/products"
+              >
                 ALL PRODUCTS
               </Link>
             </li>
             <li className={styles.footer__item}>
-              <Link className={`${styles.footer__link} regular-14`} href="/">
+              <Link
+                className={`${styles.footer__link} regular-14`}
+                href="/about"
+              >
                 ABOUT SEEDRA
               </Link>
             </li>
             <li className={styles.footer__item}>
-              <Link className={`${styles.footer__link} regular-14`} href="/">
+              <Link
+                className={`${styles.footer__link} regular-14`}
+                href="/blog"
+              >
                 OUR BLOG
               </Link>
             </li>
           </ul>
+          {/* TODO: 🎯 добавить ссылку */}
           <Image
             className={styles.footer__logo}
             src="/logo.svg"
