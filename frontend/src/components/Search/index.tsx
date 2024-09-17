@@ -2,9 +2,13 @@ import React from "react";
 import styles from "./page.module.scss";
 import Icons from "../Icons";
 
-const Search = () => {
+interface ISearch {
+  className?: string;
+}
+
+const Search = ({ className }: ISearch) => {
   return (
-    <form className={styles.search}>
+    <form className={`${styles.search} ${className}`}>
       <Icons iconName="search" />
       <input
         className={styles.search__input}

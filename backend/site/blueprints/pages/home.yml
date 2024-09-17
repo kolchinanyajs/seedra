@@ -1,0 +1,23 @@
+Title: Home
+
+fields:
+  hero:
+    label: Hero
+    type: object
+    fields:
+      caption:
+        label: Caption
+        type: text
+      description:
+        label: Description
+        type: textarea
+  banner:
+    label: Banner
+    type: object
+    fields:
+      caption:
+        label: Caption
+        type: text
+      description:
+        label: Description
+        type: textarea

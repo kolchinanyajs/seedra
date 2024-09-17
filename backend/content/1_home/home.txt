@@ -1,0 +1,27 @@
+Title: Home
+
+----
+
+Hero:
+
+caption: Seedra
+description: dadad
+
+----
+
+Banner:
+
+caption: sfsfsdfsdfsdf
+description: sdfsf
+
+----
+
+Caption: Seedra
+
+----
+
+Description: Set how Kirby handles content. On this page Content file extension Set the extension you want to use for your content files.
+
+----
+
+Uuid: siriTATW76HJZaDv

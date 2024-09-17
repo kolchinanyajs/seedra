@@ -1,6 +1,23 @@
 .products-navigation {
   display: flex;
   align-items: center;
-  gap: rem(20);
+  gap: rem(26);
   margin-bottom: rem(25);
+  height: rem(63);
+  &__search {
+    height: 100%;
+    margin-right: 0;
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+  }
+  &__select {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__single-value {
+    display: flex;
+    flex-direction: column;
+  }
 }

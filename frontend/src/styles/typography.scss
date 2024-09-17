@@ -56,3 +56,10 @@
   font-weight: 500;
   line-height: 1.78;
 }
+
+.card-title {
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: 1.1;
+  @include letter-spacing-em(-0.64, 16);
+}
