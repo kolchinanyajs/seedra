@@ -1,9 +1,17 @@
 <?php
 
+$hero = $page->hero()->toObject();
+$banner = $page->banner()->toObject();
+
 $data = [
-  'title' => $page->title()->value(),
-  'caption' => $page->caption()->value(),
-  'description' => $page->description()->value()
+  'hero' => [
+    'caption' => $hero->caption()->value(),
+    'description' => $hero->description()->value(),
+  ],
+  'banner' => [
+    'caption' => $banner->caption()->value(),
+    'description' => $banner->description()->value(),
+  ],
 ];
 
 $kirby->response()->json();

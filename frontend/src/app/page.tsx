@@ -4,11 +4,15 @@ import Feedback from "@/components/Feedback";
 import Help from "@/components/Help";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
+import axios from "axios";
 
-export default function Home() {
+export default async function Home() {
+  const props = await axios.get(`${process.env.BACKEND_URL}`);
+  const { hero, banner } = props.data;
+
   return (
     <main>
-      <Hero />
+      <Hero {...hero} />
       <Banner
         title="We sell seeds"
         description="that always sprout and gardening supplies which never break"

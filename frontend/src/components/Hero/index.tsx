@@ -4,15 +4,17 @@ import Container from "../Container";
 import Image from "next/image";
 import Button from "../Button";
 
-const Hero = () => {
+interface IHero {
+  caption: string;
+}
+
+const Hero = ({ caption }: IHero) => {
   return (
     <section className={styles.hero}>
       <Container className={styles.hero__container}>
         <div className={styles.hero__inner}>
           <div className={styles.hero__content}>
-            <h1 className={`${styles.hero__title} h1`}>
-              SEEDRA Basil Seeds for Indoor and Outdoor Planting
-            </h1>
+            <h1 className={`${styles.hero__title} h1`}>{caption}</h1>
             <p className={`${styles.hero__description} light-16`}>
               Be&nbsp;sure of&nbsp;our quality&nbsp;&mdash; the freshest batches
               of&nbsp;this season. Non-GMO, Heirloom&nbsp;&mdash; our seeds were
