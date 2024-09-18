@@ -4,11 +4,17 @@ import Feedback from "@/components/Feedback";
 import Help from "@/components/Help";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
-import axios from "axios";
 
 export default async function Home() {
-  const props = await axios.get(`${process.env.BACKEND_URL}`);
-  const { hero, banner } = props.data;
+  const res = await fetch(`${process.env.BACKEND_URL}`, {
+    next: { revalidate: 60 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const { hero } = await res.json();
 
   return (
     <main>
