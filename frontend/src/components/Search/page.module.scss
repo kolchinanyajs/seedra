@@ -23,4 +23,20 @@
       color: var(--text-secondary);
     }
   }
+  &__filter {
+    @include reset-btn;
+    --size: #{rem(18)};
+    width: var(--size);
+    height: var(--size);
+    display: none;
+    flex-shrink: 0;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+    i,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

@@ -4,6 +4,10 @@
   gap: rem(26);
   margin-bottom: rem(25);
   height: rem(63);
+  @media (max-width: $tablet) {
+    height: rem(53);
+    margin-bottom: rem(16);
+  }
   &__search {
     height: 100%;
     margin-right: 0;

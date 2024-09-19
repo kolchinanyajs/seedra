@@ -34,6 +34,20 @@ const Filters = () => {
       <Accordion title="Price">
         <RangeSlider />
       </Accordion>
+      <Accordion title="Use">
+        <div className={styles["filters__checkboxes"]}>
+          {checkboxes.map(({ label }) => (
+            <Input label={label} key={label} />
+          ))}
+        </div>
+      </Accordion>
+      <Accordion title="Additional Characteristic">
+        <div className={styles["filters__checkboxes"]}>
+          {checkboxes.map(({ label }) => (
+            <Input label={label} key={label} />
+          ))}
+        </div>
+      </Accordion>
     </aside>
   );
 };

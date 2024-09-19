@@ -8,6 +8,7 @@ import All from "./All";
 import Menu from "./Menu";
 import Arrow from "./Arrow";
 import RangeLine from "./RangeLine";
+import Filter from "./Filter";
 
 interface IIcons {
   iconName: string;
@@ -40,6 +41,9 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "range-line":
       icon = <RangeLine />;
+      break;
+    case "filter":
+      icon = <Filter />;
       break;
     default:
       icon = <i>Иконка не найдена</i>;

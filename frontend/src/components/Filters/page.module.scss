@@ -1,4 +1,7 @@
 .filters {
+  @media (max-width: $tablet) {
+    display: none;
+  }
   &__title {
     margin-bottom: rem(9);
   }
