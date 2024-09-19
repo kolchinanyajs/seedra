@@ -7,7 +7,7 @@ import styles from "./page.module.scss";
 const ProductsGrid = () => {
   return (
     <div className={styles["products-grid"]}>
-      <Filters />
+      <Filters hideMobile={true} />
       <ProductsCards />
     </div>
   );

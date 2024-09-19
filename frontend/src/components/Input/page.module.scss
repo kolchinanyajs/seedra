@@ -36,4 +36,9 @@
     transition: border-color 0.3s ease-out;
     flex-shrink: 0;
   }
+  &__label {
+    @media (max-width: $tablet) {
+      max-width: rem(171);
+    }
+  }
 }

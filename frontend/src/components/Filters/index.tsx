@@ -6,9 +6,15 @@ import { checkboxes } from "./data";
 
 import RangeSlider from "../RangeSlider";
 
-const Filters = () => {
+interface IFilters {
+  hideMobile?: boolean;
+}
+
+const Filters = ({ hideMobile }: IFilters) => {
   return (
-    <aside className={styles["filters"]}>
+    <aside
+      className={`${styles["filters"]} ${hideMobile && styles["_hide-mobile"]}`}
+    >
       <p className={`${styles["filters__title"]} regular-14 ttu`}>Filters</p>
       <Accordion title="Seed type">
         <div className={styles["filters__checkboxes"]}>
