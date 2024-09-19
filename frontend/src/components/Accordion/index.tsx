@@ -18,7 +18,7 @@ const Accordion = ({ title, children }: IAccordion) => {
         className={styles["accordion__header"]}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <p className={`${styles["accordion__title"]} medium-16 ttu`}>{title}</p>
+        <p className={`${styles["accordion__title"]} medium-16`}>{title}</p>
         <motion.div
           className={styles["accordion__arrow"]}
           initial={{ rotate: 0 }}

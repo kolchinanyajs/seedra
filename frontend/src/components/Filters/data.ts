@@ -1,4 +1,4 @@
-export const seedType = [
+export const checkboxes = [
   {
     label: "Hybrid",
   },
@@ -7,5 +7,8 @@ export const seedType = [
   },
   {
     label: "Organic Seeds, Plants, and Supplies",
+  },
+  {
+    label: "Pelleted See",
   },
 ];

@@ -7,6 +7,7 @@ import Basket from "./Basket";
 import All from "./All";
 import Menu from "./Menu";
 import Arrow from "./Arrow";
+import RangeLine from "./RangeLine";
 
 interface IIcons {
   iconName: string;
@@ -36,6 +37,9 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "arrow":
       icon = <Arrow />;
+      break;
+    case "range-line":
+      icon = <RangeLine />;
       break;
     default:
       icon = <i>Иконка не найдена</i>;

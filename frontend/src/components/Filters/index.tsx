@@ -2,7 +2,9 @@ import React from "react";
 import Accordion from "../Accordion";
 import styles from "./page.module.scss";
 import Input from "../Input";
-import { seedType } from "./data";
+import { checkboxes } from "./data";
+
+import RangeSlider from "../RangeSlider";
 
 const Filters = () => {
   return (
@@ -10,12 +12,28 @@ const Filters = () => {
       <p className={`${styles["filters__title"]} regular-14 ttu`}>Filters</p>
       <Accordion title="Seed type">
         <div className={styles["filters__checkboxes"]}>
-          {seedType.map(({ label }) => (
+          {checkboxes.map(({ label }) => (
             <Input label={label} key={label} />
           ))}
         </div>
       </Accordion>
-      <Accordion title="Accordion">1</Accordion>
+      <Accordion title="Featured">
+        <div className={styles["filters__checkboxes"]}>
+          {checkboxes.map(({ label }) => (
+            <Input label={label} key={label} />
+          ))}
+        </div>
+      </Accordion>
+      <Accordion title="Growing Conditions">
+        <div className={styles["filters__checkboxes"]}>
+          {checkboxes.map(({ label }) => (
+            <Input label={label} key={label} />
+          ))}
+        </div>
+      </Accordion>
+      <Accordion title="Price">
+        <RangeSlider />
+      </Accordion>
     </aside>
   );
 };

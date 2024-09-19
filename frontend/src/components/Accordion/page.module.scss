@@ -5,7 +5,7 @@
   }
   &:last-of-type {
     #{$this}__header {
-      border-color: transparent;
+      border-bottom-color: transparent;
     }
   }
   &__header {
@@ -14,11 +14,11 @@
     justify-content: space-between;
     min-height: rem(42);
     border-top: 1px solid var(--light-grey-stroke);
-    border-bottom: 1px solid var(--light-grey-stroke);
     cursor: pointer;
   }
   &__content {
     padding: rem(16) 0;
+    border-top: 1px solid var(--light-grey-stroke);
   }
   &__arrow {
     --size: #{rem(24)};
