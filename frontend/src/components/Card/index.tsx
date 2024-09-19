@@ -35,10 +35,7 @@ const Card = () => {
       </picture>
       <div className={styles.card__content}>
         <Rating rating={4.5} ratingCount={123} />
-        <Link
-          className={styles.card__title}
-          href={`products/${Math.floor(Math.random() * 100)}`}
-        >
+        <Link className={styles.card__title} href={`products/${1}`}>
           Seedra Cilantro Seeds for Planting Indoor and Outdoor
         </Link>
         <footer className={styles.card__footer}>

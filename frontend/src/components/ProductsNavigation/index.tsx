@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Search from "../Search";
 import Select from "react-select";
 
@@ -18,7 +18,11 @@ const ProductsNavigation = () => {
     label: string;
   } | null>(options[0]);
 
-  return (
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => setIsMounted(true), []);
+
+  return isMounted ? (
     <div className={styles["products-navigation"]}>
       <Search className={styles["products-navigation__search"]} />
       <Select
@@ -72,7 +76,7 @@ const ProductsNavigation = () => {
         }}
       />
     </div>
-  );
+  ) : null;
 };
 
 export default ProductsNavigation;

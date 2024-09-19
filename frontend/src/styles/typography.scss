@@ -63,3 +63,7 @@
   line-height: 1.1;
   @include letter-spacing-em(-0.64, 16);
 }
+
+.ttu {
+  text-transform: uppercase;
+}

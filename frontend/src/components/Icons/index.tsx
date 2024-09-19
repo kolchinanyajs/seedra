@@ -6,6 +6,7 @@ import Search from "./Search";
 import Basket from "./Basket";
 import All from "./All";
 import Menu from "./Menu";
+import Arrow from "./Arrow";
 
 interface IIcons {
   iconName: string;
@@ -32,6 +33,9 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "menu":
       icon = <Menu />;
+      break;
+    case "arrow":
+      icon = <Arrow />;
       break;
     default:
       icon = <i>Иконка не найдена</i>;

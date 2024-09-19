@@ -6,8 +6,6 @@ const Menu = () => {
       <defs>
         <clipPath id="clip23_2363">
           <rect
-            id="Hicon / Bold / Menu"
-            rx="-0.500000"
             width="23.000000"
             height="23.000000"
             transform="translate(12.500000 12.500000)"
