@@ -1,0 +1,39 @@
+.input {
+  --size: #{rem(20)};
+  $this: &;
+  position: relative;
+  display: inline-flex;
+  gap: rem(9);
+  align-items: center;
+  flex-shrink: 0;
+  * {
+    cursor: pointer;
+  }
+  &__input {
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    border: 0;
+    outline: 0;
+    opacity: 0;
+
+    &:hover + #{$this}__box {
+      border-color: var(--green-brand);
+      transition: border-color 0.3s ease-out;
+    }
+    &:checked + #{$this}__box {
+      border-color: var(--green-brand);
+      background: url("/checkbox.svg") center center no-repeat;
+      background-size: rem(13) rem(9);
+    }
+  }
+  &__box {
+    display: block;
+    border-radius: rem(6);
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid var(--light-grey-stroke);
+    transition: border-color 0.3s ease-out;
+    flex-shrink: 0;
+  }
+}

@@ -2,4 +2,9 @@
   &__title {
     margin-bottom: rem(9);
   }
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: rem(9);
+  }
 }
