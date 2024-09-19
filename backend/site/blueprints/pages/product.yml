@@ -1,0 +1,9 @@
+Title: Product
+
+fields:
+  name:
+    label: Name
+    type: text
+  price:
+    label: Price
+    type: number

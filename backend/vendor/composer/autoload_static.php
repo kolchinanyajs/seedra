@@ -51,6 +51,10 @@ class ComposerStaticInit529129d85927b3c5ea473553320ef686
         array (
             'Base32\\' => 7,
         ),
+        'A' => 
+        array (
+            'Akh\\Typograf\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -96,8 +100,8 @@ class ComposerStaticInit529129d85927b3c5ea473553320ef686
         ),
         'Kirby\\' => 
         array (
-            0 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
-            1 => __DIR__ . '/../..' . '/kirby/src',
+            0 => __DIR__ . '/../..' . '/kirby/src',
+            1 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
         ),
         'Composer\\Semver\\' => 
         array (
@@ -106,6 +110,10 @@ class ComposerStaticInit529129d85927b3c5ea473553320ef686
         'Base32\\' => 
         array (
             0 => __DIR__ . '/..' . '/christian-riesen/base32/src',
+        ),
+        'Akh\\Typograf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/akh/typograf/src',
         ),
     );
 
@@ -127,6 +135,52 @@ class ComposerStaticInit529129d85927b3c5ea473553320ef686
     );
 
     public static $classMap = array (
+        'Akh\\Typograf\\Debug' => __DIR__ . '/..' . '/akh/typograf/src/Debug.php',
+        'Akh\\Typograf\\RuleFinder' => __DIR__ . '/..' . '/akh/typograf/src/RuleFinder.php',
+        'Akh\\Typograf\\Rule\\AbstractRule' => __DIR__ . '/..' . '/akh/typograf/src/Rule/AbstractRule.php',
+        'Akh\\Typograf\\Rule\\Dash\\IzZaPod' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Dash/IzZaPod.php',
+        'Akh\\Typograf\\Rule\\Dash\\KaKas' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Dash/KaKas.php',
+        'Akh\\Typograf\\Rule\\Dash\\ReplaceDash' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Dash/ReplaceDash.php',
+        'Akh\\Typograf\\Rule\\Dash\\ToLiboNebud' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Dash/ToLiboNebud.php',
+        'Akh\\Typograf\\Rule\\Html\\Paragraph' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Html/Paragraph.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\AfterNumber' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/AfterNumber.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\AfterShortWord' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/AfterShortWord.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\BeforeParticle' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/BeforeParticle.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\BeforeShortLastWord' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/BeforeShortLastWord.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\DayMonth' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/DayMonth.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\Initials' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/Initials.php',
+        'Akh\\Typograf\\Rule\\Nbsp\\ReplaceNbsp' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Nbsp/ReplaceNbsp.php',
+        'Akh\\Typograf\\Rule\\Number\\BankAccount' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/BankAccount.php',
+        'Akh\\Typograf\\Rule\\Number\\DimensionSup' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/DimensionSup.php',
+        'Akh\\Typograf\\Rule\\Number\\Fraction' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/Fraction.php',
+        'Akh\\Typograf\\Rule\\Number\\Ordinal' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/Ordinal.php',
+        'Akh\\Typograf\\Rule\\Number\\Phone' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/Phone.php',
+        'Akh\\Typograf\\Rule\\Number\\Sub' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/Sub.php',
+        'Akh\\Typograf\\Rule\\Number\\Sup' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/Sup.php',
+        'Akh\\Typograf\\Rule\\Number\\Triad' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Number/Triad.php',
+        'Akh\\Typograf\\Rule\\Punctuation\\ANo' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Punctuation/ANo.php',
+        'Akh\\Typograf\\Rule\\Punctuation\\Apostrophe' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Punctuation/Apostrophe.php',
+        'Akh\\Typograf\\Rule\\Punctuation\\DelDouble' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Punctuation/DelDouble.php',
+        'Akh\\Typograf\\Rule\\Punctuation\\ExclamationQuestion' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Punctuation/ExclamationQuestion.php',
+        'Akh\\Typograf\\Rule\\Punctuation\\Hellip' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Punctuation/Hellip.php',
+        'Akh\\Typograf\\Rule\\Quote\\Quote' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Quote/Quote.php',
+        'Akh\\Typograf\\Rule\\Quote\\QuoteLink' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Quote/QuoteLink.php',
+        'Akh\\Typograf\\Rule\\Space\\AfterDot' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/AfterDot.php',
+        'Akh\\Typograf\\Rule\\Space\\AfterHellip' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/AfterHellip.php',
+        'Akh\\Typograf\\Rule\\Space\\AfterPunctuation' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/AfterPunctuation.php',
+        'Akh\\Typograf\\Rule\\Space\\BeforeBracket' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/BeforeBracket.php',
+        'Akh\\Typograf\\Rule\\Space\\Bracket' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/Bracket.php',
+        'Akh\\Typograf\\Rule\\Space\\DelBeforeLine' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/DelBeforeLine.php',
+        'Akh\\Typograf\\Rule\\Space\\DelBeforePercent' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/DelBeforePercent.php',
+        'Akh\\Typograf\\Rule\\Space\\DelBeforePunctuation' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/DelBeforePunctuation.php',
+        'Akh\\Typograf\\Rule\\Space\\DelRepeatN' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/DelRepeatN.php',
+        'Akh\\Typograf\\Rule\\Space\\DelRepeatSpace' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/DelRepeatSpace.php',
+        'Akh\\Typograf\\Rule\\Space\\Year' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Space/Year.php',
+        'Akh\\Typograf\\Rule\\Symbol\\Arrow' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Symbol/Arrow.php',
+        'Akh\\Typograf\\Rule\\Symbol\\Copy' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Symbol/Copy.php',
+        'Akh\\Typograf\\Rule\\Symbol\\Math' => __DIR__ . '/..' . '/akh/typograf/src/Rule/Symbol/Math.php',
+        'Akh\\Typograf\\SafeBlock' => __DIR__ . '/..' . '/akh/typograf/src/SafeBlock.php',
+        'Akh\\Typograf\\Typograf' => __DIR__ . '/..' . '/akh/typograf/src/Typograf.php',
         'Base32\\Base32' => __DIR__ . '/..' . '/christian-riesen/base32/src/Base32.php',
         'Base32\\Base32Hex' => __DIR__ . '/..' . '/christian-riesen/base32/src/Base32Hex.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',

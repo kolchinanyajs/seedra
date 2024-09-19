@@ -4,26 +4,15 @@ import Feedback from "@/components/Feedback";
 import Help from "@/components/Help";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
+import { fetchData } from "@/utils/fetchData";
 
 export default async function Home() {
-  const res = await fetch(`${process.env.BACKEND_URL}`, {
-    next: { revalidate: 60 },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  const { hero } = await res.json();
+  const { hero, banner } = await fetchData();
 
   return (
     <main>
       <Hero {...hero} />
-      <Banner
-        title="We sell seeds"
-        description="that always sprout and gardening supplies which never break"
-        className="hero"
-      />
+      <Banner {...banner} />
       <Products />
       <Blog />
       <Feedback />
