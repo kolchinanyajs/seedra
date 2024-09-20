@@ -4,6 +4,7 @@
   padding-bottom: rem(22);
   border-radius: rem(8);
   border: rem(2) solid var(--light-grey-stroke);
+  background: var(--white);
   @media (max-width: $tablet) {
     padding: rem(30) rem(14) rem(24);
   }

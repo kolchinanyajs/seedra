@@ -12,11 +12,11 @@ const Available = () => {
             height="23.000000"
             transform="translate(0.500000 0.500000)"
             fill="white"
-            fill-opacity="0"
+            fillOpacity="0"
           />
         </clipPath>
       </defs>
-      <g clip-path="url(#clip13_1496)">
+      <g clipPath="url(#clip13_1496)">
         <rect
           id="Icon Frame"
           rx="-0.500000"
@@ -24,15 +24,15 @@ const Available = () => {
           height="23.000000"
           transform="translate(0.500000 0.500000)"
           fill="#FFFFFF"
-          fill-opacity="0"
+          fillOpacity="0"
         />
         <path
           id="Vector 5"
           d="M5 12L10 17L20 7"
           stroke="#4FA083"
-          stroke-opacity="1.000000"
-          stroke-width="2.000000"
-          stroke-linejoin="round"
+          strokeOpacity="1.000000"
+          strokeWidth="2.000000"
+          strokeLinejoin="round"
           stroke-linecap="round"
         />
       </g>

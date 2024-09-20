@@ -8,8 +8,8 @@ import Quantity from "@/components/Quantity";
 import Input from "@/components/Input";
 import { packages } from "./data";
 import Button from "@/components/Button";
-import Icons from "@/components/Icons";
 import Favorite from "@/components/Icons/Favorite";
+import ProductsRelated from "@/components/ProductsRelated";
 
 const Products = ({ params }: { params: { id: string } }) => {
   return (
@@ -131,6 +131,7 @@ const Products = ({ params }: { params: { id: string } }) => {
             </table>
           </div>
         </div>
+        <ProductsRelated />
       </Container>
     </section>
   );

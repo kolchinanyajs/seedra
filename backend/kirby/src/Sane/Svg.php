@@ -62,7 +62,7 @@ class Svg extends Xml
 		'alignment-baseline',
 		'baseline-shift',
 		'clip',
-		'clip-path',
+		'clipPath',
 		'clip-rule',
 		'color',
 		'color-interpolation',
