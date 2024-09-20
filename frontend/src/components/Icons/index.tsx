@@ -13,6 +13,7 @@ import Available from "./Available";
 import Tomato from "./Tomato";
 import Minus from "./Minus";
 import Plus from "./Plus";
+import Favorite from "./Favorite";
 
 interface IIcons {
   iconName: string;

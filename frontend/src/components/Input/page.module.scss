@@ -6,8 +6,19 @@
   gap: rem(9);
   align-items: center;
   flex-shrink: 0;
+  cursor: pointer;
   * {
     cursor: pointer;
+  }
+  &._package {
+    width: 100%;
+    padding: rem(14) rem(12);
+    height: rem(44);
+    border-radius: rem(8);
+    border: 1px solid var(--light-grey-stroke);
+    &:has(#{$this}__input:checked) {
+      border-color: var(--green-brand);
+    }
   }
   &__input {
     width: var(--size);
@@ -40,5 +51,11 @@
     @media (max-width: $tablet) {
       max-width: rem(171);
     }
+  }
+  &__price {
+    margin-left: auto;
+    display: flex;
+    gap: rem(8);
+    align-items: center;
   }
 }

@@ -7,18 +7,48 @@
     gap: rem(51);
     align-items: flex-start;
     grid-template-columns: rem(445) 1fr;
+    margin-bottom: rem(80);
   }
   &__labels {
     display: flex;
     gap: rem(11);
     margin-bottom: rem(22);
   }
+  &__favorite {
+    @include reset-btn();
+  }
+  &__buttons {
+    display: flex;
+    gap: rem(16);
+  }
+  &__packages {
+    margin-bottom: rem(23);
+  }
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__actual-price-value {
+    font-size: rem(28);
+    font-weight: 600;
+  }
 }
 
 .quantity {
+  margin-bottom: rem(8);
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.packages {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  &__input {
+    width: 100%;
   }
 }

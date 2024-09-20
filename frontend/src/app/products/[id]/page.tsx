@@ -5,6 +5,11 @@ import styles from "./page.module.scss";
 import ProductsGallery from "@/components/ProductsGallery";
 import Label from "@/components/Label";
 import Quantity from "@/components/Quantity";
+import Input from "@/components/Input";
+import { packages } from "./data";
+import Button from "@/components/Button";
+import Icons from "@/components/Icons";
+import Favorite from "@/components/Icons/Favorite";
 
 const Products = ({ params }: { params: { id: string } }) => {
   return (
@@ -37,6 +42,37 @@ const Products = ({ params }: { params: { id: string } }) => {
                 </p>
                 <Quantity />
               </header>
+            </div>
+            <div
+              className={`${styles["products__packages"]} ${styles["packages"]}`}
+            >
+              {packages.map(({ name, price }) => (
+                <Input
+                  className={"_package"}
+                  label={name}
+                  type="radio"
+                  price={price}
+                  name="package"
+                />
+              ))}
+            </div>
+            <div className={styles["products__prices"]}>
+              <div className={styles["products__price"]}>
+                <p
+                  className={`${styles["products__old-price-value"]} medium-16 text-secondary`}
+                >
+                  $15.56
+                </p>
+                <p className={styles["products__actual-price-value"]}>$12.56</p>
+              </div>
+              <div className={styles["products__buttons"]}>
+                <button className={styles["products__favorite"]} type="button">
+                  <Favorite variant="green" />
+                </button>
+                <Button className={styles["products__add"]} variant="primary">
+                  Add to cart
+                </Button>
+              </div>
             </div>
           </div>
         </div>
