@@ -1,0 +1,43 @@
+import React from "react";
+
+const Available = () => {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="clip13_1496">
+          <rect
+            id="Icon / 24×24 / Fill / Interface / Check"
+            rx="-0.500000"
+            width="23.000000"
+            height="23.000000"
+            transform="translate(0.500000 0.500000)"
+            fill="white"
+            fill-opacity="0"
+          />
+        </clipPath>
+      </defs>
+      <g clip-path="url(#clip13_1496)">
+        <rect
+          id="Icon Frame"
+          rx="-0.500000"
+          width="23.000000"
+          height="23.000000"
+          transform="translate(0.500000 0.500000)"
+          fill="#FFFFFF"
+          fill-opacity="0"
+        />
+        <path
+          id="Vector 5"
+          d="M5 12L10 17L20 7"
+          stroke="#4FA083"
+          stroke-opacity="1.000000"
+          stroke-width="2.000000"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export default Available;

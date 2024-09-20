@@ -1,0 +1,24 @@
+.products {
+  &__title {
+    margin-bottom: rem(15);
+  }
+  &__grid {
+    display: grid;
+    gap: rem(51);
+    align-items: flex-start;
+    grid-template-columns: rem(445) 1fr;
+  }
+  &__labels {
+    display: flex;
+    gap: rem(11);
+    margin-bottom: rem(22);
+  }
+}
+
+.quantity {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

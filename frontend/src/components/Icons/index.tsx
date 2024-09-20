@@ -9,6 +9,10 @@ import Menu from "./Menu";
 import Arrow from "./Arrow";
 import RangeLine from "./RangeLine";
 import Filter from "./Filter";
+import Available from "./Available";
+import Tomato from "./Tomato";
+import Minus from "./Minus";
+import Plus from "./Plus";
 
 interface IIcons {
   iconName: string;
@@ -44,6 +48,18 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "filter":
       icon = <Filter />;
+      break;
+    case "available":
+      icon = <Available />;
+      break;
+    case "tomato":
+      icon = <Tomato />;
+      break;
+    case "minus":
+      icon = <Minus />;
+      break;
+    case "plus":
+      icon = <Plus />;
       break;
     default:
       icon = <i>Иконка не найдена</i>;
