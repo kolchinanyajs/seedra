@@ -76,6 +76,61 @@ const Products = ({ params }: { params: { id: string } }) => {
             </div>
           </div>
         </div>
+        <div
+          className={`${styles["products__information"]} ${styles["products-information"]}`}
+        >
+          <h2 className={`${styles["products-information__title"]} h2`}>
+            Product information.
+          </h2>
+          <div className={styles["products-information__content"]}>
+            <ul className={`${styles["products-information__list"]} light-16`}>
+              <li>
+                EEDRA Cilantro Seeds&nbsp;&mdash; contains 300 seeds
+                in&nbsp;1&nbsp;Pack and professional instructions created
+                by&nbsp;PhD Helga George
+              </li>
+              <li>
+                Be&nbsp;sure of&nbsp;our quality&nbsp;&mdash; the freshest
+                batches of&nbsp;this season. Non-GMO, Heirloom&nbsp;&mdash; our
+                seeds were tested and have the best germination ratings. Your
+                easy growing experience is&nbsp;our guarantee
+              </li>
+              <li>
+                Cilantro common culinary uses: salsa, guacamole, pesto, salads,
+                chutney, baked breads, pad thai, pico de&nbsp;gallo, rice,
+                grilled shrimp skewers, falafel, and more
+              </li>
+              <li>
+                Proudly sourced in&nbsp;the USA&nbsp;&mdash; our garden seeds
+                are grown, harvested, and packaged in&nbsp;the USA.
+                We&nbsp;support local farmers and are happy to&nbsp;produce this
+                American-made product
+              </li>
+              <li>
+                SEEDRA customer service - please contact us directly through
+                Amazon with any questions or concerns about our products. We
+                care about each customer and do our best to provide you with
+                100% satisfaction
+              </li>
+            </ul>
+            <table className={styles["products-information__table"]}>
+              <tbody>
+                <tr>
+                  <td>Package Dimensions</td>
+                  <td>5.51 x 3.5 x 0.35 inches</td>
+                </tr>
+                <tr>
+                  <td>Item Weight</td>
+                  <td>0.317 ounces</td>
+                </tr>
+                <tr>
+                  <td>ASIN</td>
+                  <td>B08Z3HN5MP</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </Container>
     </section>
   );

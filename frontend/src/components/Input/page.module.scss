@@ -10,6 +10,26 @@
   * {
     cursor: pointer;
   }
+  &._radio {
+    #{$this}__box {
+      border-radius: 50%;
+    }
+    #{$this}__input:checked + #{$this}__box {
+      background: none;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(8);
+        height: rem(8);
+        border-radius: 50%;
+        background: var(--green-brand);
+      }
+    }
+  }
   &._package {
     width: 100%;
     padding: rem(14) rem(12);

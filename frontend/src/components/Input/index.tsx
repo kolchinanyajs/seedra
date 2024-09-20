@@ -11,7 +11,15 @@ interface IInput {
 
 const Input = ({ label, type, className, price, name }: IInput) => {
   return (
-    <label className={`${styles["input"]} ${className && styles[className]}`}>
+    <label
+      className={`${styles["input"]} ${className && styles[className]} ${
+        type === "checkbox"
+          ? styles["_checkbox"]
+          : type === "radio"
+          ? styles["_radio"]
+          : styles["_text"]
+      }`}
+    >
       <input className={styles["input__input"]} type={type} name={name} />
       <span className={styles["input__box"]}></span>
       <span className={`${styles["input__label"]} regular-14 text-secondary`}>
