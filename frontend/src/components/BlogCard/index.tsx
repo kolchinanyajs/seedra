@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import Button from "../Button";
 import Image from "next/image";
 import classNames from "classnames";
+import Link from "next/link";
 
 interface IBlogCard {
   time: string;
@@ -48,7 +49,9 @@ const BlogCard = ({
             dangerouslySetInnerHTML={{ __html: description }}
           ></p>
         )}
-        <Button variant="secondary">Read</Button>
+        <Link className={styles.blogcard__link} href="/blog/1">
+          <Button variant="secondary">Read</Button>
+        </Link>
       </div>
       <div className={styles.blogcard__image}>
         {image && <Image src={image} alt="blog" fill priority={true} />}

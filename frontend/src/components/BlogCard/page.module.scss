@@ -70,4 +70,7 @@
       --size: #{rem(220)};
     }
   }
+  &__link {
+    text-decoration: none;
+  }
 }
