@@ -10,4 +10,8 @@ Price: 13.56
 
 ----
 
+Isfavorite: true
+
+----
+
 Uuid: kCeYyqVp0GthU4XW
