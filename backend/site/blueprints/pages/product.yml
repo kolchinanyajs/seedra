@@ -7,3 +7,6 @@ fields:
   price:
     label: Price
     type: number
+  isFavorite:
+    label: Is Favorite
+    type: toggle
