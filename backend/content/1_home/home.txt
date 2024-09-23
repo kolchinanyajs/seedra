@@ -30,6 +30,9 @@ Products:
 caption: Our products.
 cards:
   - page://kCeYyqVp0GthU4XW
+  - page://mCBDZV3HR7UeSEAC
+  - page://Fgg1qe98H1ARSkPL
+  - page://o0knA2eVKGlexdpJ
 0:
   _id: da00b107-a52b-46d4-beac-c1f7e5a7298e
   caption: ""

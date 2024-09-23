@@ -7,8 +7,9 @@ import Rating from "../Rating";
 import Icons from "../Icons";
 import Favorite from "../Icons/Favorite";
 import Link from "next/link";
+import { ICard } from "../Products";
 
-const Card = () => {
+const Card = ({ name, price = "12.56", url }: ICard) => {
   const [favorite, setFavorite] = useState(false);
 
   return (
@@ -35,11 +36,11 @@ const Card = () => {
       </picture>
       <div className={styles.card__content}>
         <Rating rating={4.5} ratingCount={123} />
-        <Link className={styles.card__title} href={`products/${1}`}>
-          Seedra Cilantro Seeds for Planting Indoor and Outdoor
+        <Link className={styles.card__title} href={url ? url : "/"}>
+          {name}
         </Link>
         <footer className={styles.card__footer}>
-          <p className={styles.card__price}>$12.56</p>
+          <p className={styles.card__price}>${price}</p>
           <button className={styles.card__button} type="button">
             <Icons iconName="basket" />
           </button>

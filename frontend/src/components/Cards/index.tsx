@@ -7,8 +7,9 @@ import { useMediaQuery } from "react-responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import { ICard } from "../Products";
 
-const Cards = () => {
+const Cards = ({ cards }: { cards: ICard[] }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -24,16 +25,18 @@ const Cards = () => {
     <div className={`${styles.cards} slider`}>
       {isMobile ? (
         <Swiper slidesPerView={1.08} spaceBetween={11}>
-          {[...Array(6)].map((_, index) => (
+          {cards.map((props, index) => (
             <SwiperSlide key={index}>
-              <Card />
+              <Card {...props} />
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
         <div className={styles.cards__container}>
-          {[...Array(6)].map((_, index) => (
-            <Card key={index} />
+          {cards.map((props, index) => (
+            <div key={index}>
+              <Card {...props} />
+            </div>
           ))}
         </div>
       )}

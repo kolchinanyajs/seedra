@@ -32,5 +32,27 @@ return [
     'action'  => function() {
       return go('sitemap.xml', 301);
     }
-  ]
+  ],
+  [
+    'pattern' => 'products',
+    'language' => '*',
+    'method' => 'GET',
+    'action'  => function ($language) {
+      $kirby = kirby();
+      $site = $kirby->site();
+      $languagePath = $kirby->language()->path();
+      if ($languagePath !== '') {
+        $languagePath = '/' . $languagePath;
+      }
+
+      $products = $site->index()->published()->template('product')->pluck('id');
+      $paths = [];
+
+      foreach ($products as $product) {
+        $paths[] = $product;
+      }
+
+      return $paths;
+    }
+  ],
 ];

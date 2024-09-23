@@ -7,13 +7,14 @@ import Products from "@/components/Products";
 import { fetchData } from "@/utils/fetchData";
 
 export default async function Home() {
-  const { hero, banner } = await fetchData();
+  const url = process.env.BACKEND_URL || "/";
+  const { hero, banner, products } = await fetchData(url);
 
   return (
     <main>
       <Hero {...hero} />
       <Banner {...banner} />
-      <Products />
+      <Products {...products} />
       <Blog />
       <Feedback />
       <Help />

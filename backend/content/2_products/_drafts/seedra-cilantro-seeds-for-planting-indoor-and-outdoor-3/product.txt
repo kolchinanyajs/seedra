@@ -6,8 +6,8 @@ Name: Seedra Cilantro Seeds for Planting Indoor and Outdoor
 
 ----
 
-Price: 10
+Price: 12.56
 
 ----
 
-Uuid: kCeYyqVp0GthU4XW
+Uuid: mCBDZV3HR7UeSEAC

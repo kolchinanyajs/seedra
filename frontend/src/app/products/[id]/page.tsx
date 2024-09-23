@@ -1,7 +1,6 @@
 import Container from "@/components/Container";
 import React from "react";
 import styles from "./page.module.scss";
-
 import ProductsGallery from "@/components/ProductsGallery";
 import Label from "@/components/Label";
 import Quantity from "@/components/Quantity";
@@ -10,8 +9,14 @@ import { packages } from "./data";
 import Button from "@/components/Button";
 import Favorite from "@/components/Icons/Favorite";
 import ProductsRelated from "@/components/ProductsRelated";
+import { fetchData } from "@/utils/fetchData";
 
-const Products = ({ params }: { params: { id: string } }) => {
+const Products = async ({ params }: { params: { id: string } }) => {
+  const { id } = params;
+
+  const url = `${process.env.BACKEND_URL}products/${id}`;
+  const { name, price } = await fetchData(url);
+
   return (
     <section className={styles["products"]}>
       <Container>
@@ -20,10 +25,7 @@ const Products = ({ params }: { params: { id: string } }) => {
             <ProductsGallery />
           </div>
           <div className={styles["products__info"]}>
-            <h1 className={`${styles["products__title"]} h3`}>
-              SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor
-              Planting
-            </h1>
+            <h1 className={`${styles["products__title"]} h3`}>{name}</h1>
             <ul className={styles["products__labels"]}>
               <li className={styles["products__label"]}>
                 <Label iconName="available" text="available" />

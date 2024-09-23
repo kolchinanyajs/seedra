@@ -17,9 +17,9 @@ $data = [
   ],
   'products' => [
     'caption' => $products->caption()->value(),
-    'cards' => $products->cards()->toPages()->map(function ($page) {
+    'cards' => $products->cards()->toPages()->published()->map(function ($page) {
       return [
-        'title' => $page->title()->value(),
+        'name' => $page->name()->value(),
         'price' => $page->price()->value(),
         'url' => Url::path($page->url(), true),
       ];

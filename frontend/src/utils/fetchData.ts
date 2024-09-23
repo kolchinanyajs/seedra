@@ -1,5 +1,5 @@
-export const fetchData = async () => {
-  const res = await fetch(`${process.env.BACKEND_URL}`, {
+export const fetchData = async (url: string) => {
+  const res = await fetch(url, {
     next: { revalidate: 60 },
   });
 
