@@ -19,6 +19,7 @@ $data = [
     'caption' => $products->caption()->value(),
     'cards' => $products->cards()->toPages()->published()->map(function ($page) {
       return [
+        'id' => spl_object_id($page),
         'name' => $page->name()->value(),
         'price' => $page->price()->value(),
         'url' => Url::path($page->url(), true),
