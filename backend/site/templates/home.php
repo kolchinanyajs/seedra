@@ -21,7 +21,6 @@ $data = [
       return [
         'name' => $page->name()->value(),
         'price' => $page->price()->value(),
-        'isFavorite' => $page->isFavorite()->value(),
         'url' => Url::path($page->url(), true),
       ];
     })->values(),
