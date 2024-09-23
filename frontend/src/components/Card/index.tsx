@@ -9,7 +9,12 @@ import Favorite from "../Icons/Favorite";
 import Link from "next/link";
 import { ICard } from "../Products";
 
-const Card = ({ id, name, price = "12.56", url }: ICard) => {
+const Card = ({
+  id = 1,
+  name = "Tomato",
+  price = "12.56",
+  url = "/",
+}: ICard) => {
   const [favorite, setFavorite] = useState(false);
 
   useEffect(() => {
@@ -29,6 +34,8 @@ const Card = ({ id, name, price = "12.56", url }: ICard) => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
     setFavorite(!favorite);
   };
+
+  console.log(url);
 
   return (
     <article className={styles.card}>

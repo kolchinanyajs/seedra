@@ -36,7 +36,9 @@ const ProductsRelated = () => {
         ) : (
           <div className={styles["products-related__cards"]}>
             {[...Array(3)].map((_, index) => (
-              <Card key={index} />
+              <div key={index}>
+                <Card />
+              </div>
             ))}
           </div>
         )}

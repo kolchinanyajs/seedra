@@ -6,10 +6,10 @@ import Cards from "../Cards";
 import Button from "../Button";
 
 export interface ICard {
-  id: number;
-  name: string;
-  price: string;
-  url: string;
+  id?: number;
+  name?: string;
+  price?: string;
+  url?: string;
 }
 
 interface IProducts {
