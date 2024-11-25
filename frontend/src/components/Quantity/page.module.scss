@@ -18,6 +18,10 @@
       width: 100%;
       height: 100%;
     }
+    &[disabled] {
+      opacity: 0.2;
+      pointer-events: none;
+    }
   }
   &__value {
     --size: #{rem(32)};

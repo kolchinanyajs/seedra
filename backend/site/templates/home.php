@@ -22,6 +22,7 @@ $data = [
         'id' => spl_object_id($page),
         'name' => $page->name()->value(),
         'price' => $page->price()->value(),
+        'category' => $page->category()->value(),
         'url' => str_replace('/seedra/', '', Url::path($page->url(), true)),
       ];
     })->values(),
