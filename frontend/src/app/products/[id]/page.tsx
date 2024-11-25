@@ -31,7 +31,7 @@ const Products = async ({ params }: { params: { id: string } }) => {
                 <Label text="available" />
               </li>
               <li className={styles["products__label"]}>
-                <Label text={category} />
+                <Label text={category.toLowerCase()} />
               </li>
             </ul>
             <div

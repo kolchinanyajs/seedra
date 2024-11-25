@@ -3,26 +3,21 @@ export const categories = [
     text: "all",
   },
   {
-    icon: "all",
-    text: "Bundles",
+    text: "bundles",
   },
   {
-    icon: "all",
-    text: "Herbs",
+    text: "herbs",
   },
   {
     text: "vegetables",
   },
   {
-    icon: "all",
-    text: "Fruits",
+    text: "fruits",
   },
   {
-    icon: "all",
-    text: "Supplies",
+    text: "supplies",
   },
   {
-    icon: "all",
-    text: "Flowers",
+    text: "flowers",
   },
 ];

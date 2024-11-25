@@ -15,6 +15,10 @@ import Tomato from "./Icons/Tomato";
 import Herbs from "./Icons/Herbs";
 import Minus from "./Icons/Minus";
 import Plus from "./Icons/Plus";
+import Bundles from "./Icons/Bundles";
+import Fruits from "./Icons/Fruits";
+import Supplies from "./Icons/Supplies";
+import Flowers from "./Icons/Flowers";
 
 interface IIcons {
   iconName: string;
@@ -56,6 +60,18 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "vegetables":
       icon = <Tomato />;
+      break;
+    case "bundles":
+      icon = <Bundles />;
+      break;
+    case "fruits":
+      icon = <Fruits />;
+      break;
+    case "supplies":
+      icon = <Supplies />;
+      break;
+    case "flowers":
+      icon = <Flowers />;
       break;
     case "herbs":
       icon = <Herbs />;
