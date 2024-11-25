@@ -35,8 +35,6 @@ const Card = ({
     setFavorite(!favorite);
   };
 
-  console.log(url);
-
   return (
     <article className={styles.card}>
       <button
