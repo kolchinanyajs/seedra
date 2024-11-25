@@ -1,19 +1,20 @@
 import React from "react";
-import Instagram from "./Instagram";
-import Facebook from "./Facebook";
 import styles from "./page.module.scss";
-import Search from "./Search";
-import Basket from "./Basket";
-import All from "./All";
-import Menu from "./Menu";
-import Arrow from "./Arrow";
-import RangeLine from "./RangeLine";
-import Filter from "./Filter";
-import Available from "./Available";
-import Tomato from "./Tomato";
-import Minus from "./Minus";
-import Plus from "./Plus";
-import Favorite from "./Favorite";
+
+import Instagram from "./Icons/Instagram";
+import Facebook from "./Icons/Facebook";
+import Search from "./Icons/Search";
+import Basket from "./Icons/Basket";
+import All from "./Icons/All";
+import Menu from "./Icons/Menu";
+import Arrow from "./Icons/Arrow";
+import RangeLine from "./Icons/RangeLine";
+import Filter from "./Icons/Filter";
+import Available from "./Icons/Available";
+import Tomato from "./Icons/Tomato";
+import Herbs from "./Icons/Herbs";
+import Minus from "./Icons/Minus";
+import Plus from "./Icons/Plus";
 
 interface IIcons {
   iconName: string;
@@ -53,8 +54,11 @@ const Icons = ({ iconName }: IIcons) => {
     case "available":
       icon = <Available />;
       break;
-    case "tomato":
+    case "vegetables":
       icon = <Tomato />;
+      break;
+    case "herbs":
+      icon = <Herbs />;
       break;
     case "minus":
       icon = <Minus />;

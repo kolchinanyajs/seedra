@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./page.module.scss";
-import Star from "../Icons/Stars/Star";
-import StarHalf from "../Icons/Stars/StarHalf";
-import StarEmpty from "../Icons/Stars/StarEmpty";
+import Star from "../Icons/Icons/Stars/Star";
+import StarHalf from "../Icons/Icons/Stars/StarHalf";
+import StarEmpty from "../Icons/Icons/Stars/StarEmpty";
 
 interface IRating {
   rating: number;

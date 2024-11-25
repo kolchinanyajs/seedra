@@ -1,24 +1,21 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.scss";
 import Icons from "../Icons";
 
 interface ICategory {
-  icon: string;
   text: string;
+  isActive?: boolean;
+  onClick?: () => void;
 }
 
-const Category = ({ icon, text }: ICategory) => {
-  const [active, setActive] = useState(false);
-
+const Category = ({ text, isActive, onClick }: ICategory) => {
   return (
     <button
-      className={`${styles.category} ${active && styles._active}`}
+      className={`${styles.category} ${isActive && styles._active}`}
       type="button"
-      onClick={() => setActive(!active)}
+      onClick={onClick}
     >
-      <Icons iconName={icon} />
+      <Icons iconName={text} />
       <span className={`${styles.category__text} regular-14`}>{text}</span>
     </button>
   );

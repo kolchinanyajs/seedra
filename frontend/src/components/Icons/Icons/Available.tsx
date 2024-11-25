@@ -33,7 +33,7 @@ const Available = () => {
           strokeOpacity="1.000000"
           strokeWidth="2.000000"
           strokeLinejoin="round"
-          stroke-linecap="round"
+          strokeLinecap="round"
         />
       </g>
     </svg>

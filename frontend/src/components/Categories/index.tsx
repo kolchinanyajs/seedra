@@ -1,43 +1,25 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Category from "../Category";
 import styles from "./page.module.scss";
-
-const data = [
-  {
-    icon: "all",
-    text: "All",
-  },
-  {
-    icon: "all",
-    text: "BUNDLES",
-  },
-  {
-    icon: "all",
-    text: "HERBS",
-  },
-  {
-    icon: "all",
-    text: "VEGETABLES",
-  },
-  {
-    icon: "all",
-    text: "FRUITS",
-  },
-  {
-    icon: "all",
-    text: "SUPPLIES",
-  },
-  {
-    icon: "all",
-    text: "FLOWERS",
-  },
-];
+import { categories } from "./data";
 
 const Categories = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleChangeCategory = (index: number) => {
+    setActiveIndex(index);
+  };
+
   return (
     <ul className={styles.categories}>
-      {data.map(({ icon, text }) => (
-        <Category key={text} icon={icon} text={text} />
+      {categories.map(({ text }, index) => (
+        <Category
+          key={text}
+          text={text}
+          isActive={index === activeIndex}
+          onClick={() => handleChangeCategory(index)}
+        />
       ))}
     </ul>
   );

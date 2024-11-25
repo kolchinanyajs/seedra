@@ -23,7 +23,7 @@ const Plus = () => {
           stroke="#359740"
           strokeOpacity="1.000000"
           strokeWidth="1.500000"
-          stroke-linecap="round"
+          strokeLinecap="round"
         />
       </g>
     </svg>

@@ -5,7 +5,7 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import Rating from "../Rating";
 import Icons from "../Icons";
-import Favorite from "../Icons/Favorite";
+import Favorite from "../Icons/Icons/Favorite";
 import Link from "next/link";
 import { ICard } from "../Products";
 

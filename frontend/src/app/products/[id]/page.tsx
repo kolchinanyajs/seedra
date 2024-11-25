@@ -7,7 +7,7 @@ import Quantity from "@/components/Quantity";
 import Input from "@/components/Input";
 import { packages } from "./data";
 import Button from "@/components/Button";
-import Favorite from "@/components/Icons/Favorite";
+import Favorite from "@/components/Icons/Icons/Favorite";
 import ProductsRelated from "@/components/ProductsRelated";
 import { fetchData } from "@/utils/fetchData";
 
@@ -15,12 +15,12 @@ const Products = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
   const url = `${process.env.BACKEND_URL}products/${id}`;
-  const { name, price } = await fetchData(url);
+  const { name, category } = await fetchData(url);
 
   return (
     <section className={styles["products"]}>
       <Container>
-        <div className={styles["products__grid"]}>
+        <section className={styles["products__grid"]}>
           <div className={styles["products__gallery"]}>
             <ProductsGallery />
           </div>
@@ -28,10 +28,10 @@ const Products = async ({ params }: { params: { id: string } }) => {
             <h1 className={`${styles["products__title"]} h3`}>{name}</h1>
             <ul className={styles["products__labels"]}>
               <li className={styles["products__label"]}>
-                <Label iconName="available" text="available" />
+                <Label text="available" />
               </li>
               <li className={styles["products__label"]}>
-                <Label iconName="tomato" text="vegetable" />
+                <Label text={category} />
               </li>
             </ul>
             <div
@@ -77,8 +77,8 @@ const Products = async ({ params }: { params: { id: string } }) => {
               </div>
             </div>
           </div>
-        </div>
-        <div
+        </section>
+        <section
           className={`${styles["products__information"]} ${styles["products-information"]}`}
         >
           <h2 className={`${styles["products-information__title"]} h2`}>
@@ -132,7 +132,7 @@ const Products = async ({ params }: { params: { id: string } }) => {
               </tbody>
             </table>
           </div>
-        </div>
+        </section>
         <ProductsRelated />
       </Container>
     </section>

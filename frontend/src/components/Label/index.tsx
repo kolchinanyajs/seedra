@@ -3,18 +3,17 @@ import Icons from "../Icons";
 import styles from "./page.module.scss";
 
 interface ILabel {
-  iconName: string;
   text: string;
 }
 
-const Label = ({ iconName, text }: ILabel) => {
+const Label = ({ text }: ILabel) => {
   return (
     <div
       className={`${styles["label"]} ${
         text === "available" && styles["_available"]
       }`}
     >
-      <Icons iconName={iconName} />
+      <Icons iconName={text} />
       <span className={`${styles["label__text"]} regular-14`}>{text}</span>
     </div>
   );
