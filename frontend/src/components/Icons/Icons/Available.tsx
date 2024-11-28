@@ -7,7 +7,6 @@ const Available = () => {
         <clipPath id="clip13_1496">
           <rect
             id="Icon / 24×24 / Fill / Interface / Check"
-            rx="-0.500000"
             width="23.000000"
             height="23.000000"
             transform="translate(0.500000 0.500000)"
@@ -19,7 +18,6 @@ const Available = () => {
       <g clipPath="url(#clip13_1496)">
         <rect
           id="Icon Frame"
-          rx="-0.500000"
           width="23.000000"
           height="23.000000"
           transform="translate(0.500000 0.500000)"

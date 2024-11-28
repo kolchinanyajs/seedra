@@ -32,12 +32,20 @@ const Cards = ({ cards }: { cards: ICard[] }) => {
           ))}
         </Swiper>
       ) : (
-        <div className={styles.cards__container}>
-          {cards.map((props, index) => (
-            <div key={index}>
-              <Card {...props} />
-            </div>
-          ))}
+        <div
+          className={`${styles["cards__container"]} ${
+            cards.length === 0 && styles["empty"]
+          }`}
+        >
+          {cards.length > 0 ? (
+            cards.map((props, index) => (
+              <div key={index}>
+                <Card {...props} />
+              </div>
+            ))
+          ) : (
+            <p className={styles.cards__empty}>В этой категории нет товаров</p>
+          )}
         </div>
       )}
     </div>

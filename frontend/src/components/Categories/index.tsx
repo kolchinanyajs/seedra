@@ -4,13 +4,12 @@ import Category from "../Category";
 import styles from "./page.module.scss";
 import { categories } from "./data";
 
-const Categories = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+interface ICategories {
+  activeIndex: number;
+  onChangeCategory: (index: number, text: string) => void;
+}
 
-  const handleChangeCategory = (index: number) => {
-    setActiveIndex(index);
-  };
-
+const Categories = ({ activeIndex, onChangeCategory }: ICategories) => {
   return (
     <ul className={styles.categories}>
       {categories.map(({ text }, index) => (
@@ -18,7 +17,7 @@ const Categories = () => {
           key={text}
           text={text}
           isActive={index === activeIndex}
-          onClick={() => handleChangeCategory(index)}
+          onClick={() => onChangeCategory(index, text)}
         />
       ))}
     </ul>

@@ -7,7 +7,6 @@ const RangeLine = () => {
         <clipPath id="clip113_5184">
           <rect
             id="Hicon / Outline / Minus"
-            rx="-0.500000"
             width="23.000000"
             height="23.000000"
             transform="translate(0.500000 0.500000)"

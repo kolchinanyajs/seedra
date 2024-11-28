@@ -19,6 +19,7 @@ import Bundles from "./Icons/Bundles";
 import Fruits from "./Icons/Fruits";
 import Supplies from "./Icons/Supplies";
 import Flowers from "./Icons/Flowers";
+import AddCart from "./Icons/AddCart";
 
 interface IIcons {
   iconName: string;
@@ -39,6 +40,9 @@ const Icons = ({ iconName }: IIcons) => {
       break;
     case "basket":
       icon = <Basket />;
+      break;
+    case "add-cart":
+      icon = <AddCart />;
       break;
     case "all":
       icon = <All />;

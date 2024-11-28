@@ -7,7 +7,6 @@ const Plus = () => {
         <clipPath id="clip91_6179">
           <rect
             id="Hicon / Linear / Add"
-            rx="-0.500000"
             width="15.000000"
             height="15.000000"
             transform="translate(0.500000 0.500000)"

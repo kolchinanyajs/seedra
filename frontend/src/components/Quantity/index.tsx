@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import styles from "./page.module.scss";
 import Icons from "../Icons";
 
-const Quantity = () => {
-  const [quantity, setQuantity] = useState(2);
+interface IQuantity {
+  className?: string;
+}
+
+const Quantity = ({ className }: IQuantity) => {
+  const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
     setQuantity(quantity + 1);
@@ -16,7 +20,7 @@ const Quantity = () => {
   };
 
   return (
-    <div className={styles["quantity"]}>
+    <div className={`${styles["quantity"]} ${className}`}>
       <button
         className={styles["quantity__button"]}
         type="button"

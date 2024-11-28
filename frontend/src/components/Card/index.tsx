@@ -15,24 +15,34 @@ const Card = ({
   price = "12.56",
   url = "/",
 }: ICard) => {
-  const [favorite, setFavorite] = useState(false);
+  const [state, setState] = useState({
+    favorite: false,
+    goods: false,
+  });
+
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const goods = JSON.parse(localStorage.getItem("goods") || "[]");
 
   useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-    const isFavorite = favorites.some((item: { id: number }) => item.id === id);
-    setFavorite(isFavorite);
+    const isFavorite = favorites.some((item: any) => item.id === id);
+    const isGoods = goods.some((item: any) => item.id === id);
+    setState({
+      favorite: isFavorite,
+      goods: isGoods,
+    });
   }, [id]);
 
-  const handleFavorite = () => {
-    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-    const index = favorites.findIndex((item: { id: number }) => item.id === id);
+  const handleToggle = (type: "favorite" | "goods") => {
+    const storageKey = type === "favorite" ? "favorites" : "goods";
+    const items = JSON.parse(localStorage.getItem(storageKey) || "[]");
+    const index = items.findIndex((item: any) => item.id === id);
     if (index !== -1) {
-      favorites.splice(index, 1);
+      items.splice(index, 1);
     } else {
-      favorites.push({ id, name, price, url });
+      items.push({ id, name, price, url });
     }
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    setFavorite(!favorite);
+    localStorage.setItem(storageKey, JSON.stringify(items));
+    setState((prevState) => ({ ...prevState, [type]: !prevState[type] }));
   };
 
   return (
@@ -40,9 +50,9 @@ const Card = ({
       <button
         className={styles.card__favorite}
         type="button"
-        onClick={handleFavorite}
+        onClick={() => handleToggle("favorite")}
       >
-        {favorite ? (
+        {state.favorite ? (
           <Favorite variant="yellow-fill" />
         ) : (
           <Favorite variant="yellow" />
@@ -64,8 +74,18 @@ const Card = ({
         </Link>
         <footer className={styles.card__footer}>
           <p className={styles.card__price}>${price}</p>
-          <button className={styles.card__button} type="button">
-            <Icons iconName="basket" />
+          <button
+            className={`${styles.card__button} ${
+              state.goods ? styles.add : ""
+            }`}
+            type="button"
+            onClick={() => handleToggle("goods")}
+          >
+            {state.goods ? (
+              <Icons iconName="add-cart" />
+            ) : (
+              <Icons iconName="basket" />
+            )}
           </button>
         </footer>
       </div>

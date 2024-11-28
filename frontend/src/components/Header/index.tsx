@@ -6,25 +6,7 @@ import Icons from "../Icons";
 import Search from "../Search";
 import Button from "../Button";
 import Favorite from "../Icons/Icons/Favorite";
-
-const menu = [
-  {
-    name: "All products",
-    link: "/products",
-  },
-  {
-    name: "About seedra",
-    link: "/about",
-  },
-  {
-    name: "Our blog",
-    link: "/blog",
-  },
-  {
-    name: "Contacts",
-    link: "/contacts",
-  },
-];
+import { menu } from "./data";
 
 const Header = () => {
   return (
@@ -69,14 +51,18 @@ const Header = () => {
         <Search />
         <ul className={styles.header__buttons}>
           <li className={styles["header__buttons-item"]}>
-            <Button variant="icon">
-              <Favorite variant="green" />
-            </Button>
+            <Link href="/favorite">
+              <Button variant="icon">
+                <Favorite variant="green" />
+              </Button>
+            </Link>
           </li>
           <li className={styles["header__buttons-item"]}>
-            <Button variant="icon">
-              <Icons iconName="basket" />
-            </Button>
+            <Link href="/cart">
+              <Button variant="icon">
+                <Icons iconName="basket" />
+              </Button>
+            </Link>
           </li>
           <li className={`${styles["header__buttons-item"]} ${styles._menu}`}>
             <Button variant="icon">

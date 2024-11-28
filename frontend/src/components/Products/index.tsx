@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./page.module.scss";
 import Container from "../Container";
 import Categories from "../Categories";
@@ -10,6 +11,7 @@ export interface ICard {
   name?: string;
   price?: string;
   url?: string;
+  category?: string;
 }
 
 interface IProducts {
@@ -18,6 +20,18 @@ interface IProducts {
 }
 
 const Products = ({ caption, cards }: IProducts) => {
+  const [category, setCategory] = useState("all");
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleChangeCategory = (index: number, text: string) => {
+    setCategory(text);
+    setActiveIndex(index);
+  };
+
+  const filteredCards = cards.filter((card) => card.category === category);
+  const cardsToDisplay =
+    filteredCards.length > 0 ? filteredCards : category === "all" ? cards : [];
+
   return (
     <section className={styles.products}>
       <Container className={styles.products__container}>
@@ -27,8 +41,11 @@ const Products = ({ caption, cards }: IProducts) => {
             View all (12)
           </Button>
         </header>
-        <Categories />
-        <Cards cards={cards} />
+        <Categories
+          activeIndex={activeIndex}
+          onChangeCategory={handleChangeCategory}
+        />
+        <Cards cards={cardsToDisplay} />
       </Container>
     </section>
   );

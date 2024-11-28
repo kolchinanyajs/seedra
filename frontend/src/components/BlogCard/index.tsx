@@ -54,7 +54,9 @@ const BlogCard = ({
         </Link>
       </div>
       <div className={styles.blogcard__image}>
-        {image && <Image src={image} alt="blog" fill priority={true} />}
+        {image && (
+          <Image src={image} alt="blog" fill sizes="100%" priority={true} />
+        )}
       </div>
     </article>
   );
