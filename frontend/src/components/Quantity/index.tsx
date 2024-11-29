@@ -5,18 +5,21 @@ import Icons from "../Icons";
 
 interface IQuantity {
   className?: string;
+  handleQuantityChange: (newQuantity: number) => void;
 }
 
-const Quantity = ({ className }: IQuantity) => {
+const Quantity = ({ className, handleQuantityChange }: IQuantity) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
     setQuantity(quantity + 1);
+    handleQuantityChange(quantity + 1);
   };
 
   const handleDecrement = () => {
     if (quantity <= 1) return;
     setQuantity(quantity - 1);
+    handleQuantityChange(quantity - 1);
   };
 
   return (

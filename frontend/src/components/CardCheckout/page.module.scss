@@ -20,7 +20,11 @@
   }
   &__price {
     margin-right: rem(50);
-    min-width: rem(52);
+    width: rem(52);
+    text-align: right;
+  }
+  &__total {
+    width: rem(52);
     text-align: right;
   }
 }

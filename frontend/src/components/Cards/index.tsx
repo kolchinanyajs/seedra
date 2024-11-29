@@ -4,9 +4,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./page.module.scss";
 import Card from "../Card";
 import { useMediaQuery } from "react-responsive";
-import { Swiper, SwiperSlide } from "swiper/react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+
 import { ICard } from "../Products";
 
 const Cards = ({ cards }: { cards: ICard[] }) => {
